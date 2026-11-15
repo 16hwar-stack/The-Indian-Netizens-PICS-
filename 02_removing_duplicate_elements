@@ -1,0 +1,17 @@
+# Program to remove duplicate elements from a list while maintaining order
+
+# Sample input list with duplicates
+numbers = [1, 2, 3, 2, 4, 1, 5, 3]
+
+# Create a set to keep track of numbers we have already encountered
+seen = set()
+unique_numbers = []
+
+for num in numbers:
+  # Check if the number has not been seen yet
+  if num not in seen:
+    seen.add(num)  # Add to set of seen elements
+    unique_numbers.append(num)  # Add to our final list to keep order
+
+print("Original list:", numbers)
+print("List after removing duplicates:", unique_numbers)
