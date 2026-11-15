@@ -1,0 +1,27 @@
+# Program to check if a string is a palindrome without using slicing
+
+text = "madam"
+
+# Convert to lowercase for uniform comparison
+text = text.lower()
+
+# Initialize pointers
+left = 0
+right = len(text) - 1
+
+is_palindrome = True
+
+# Loop until the two pointers meet in the middle
+while left < right:
+  # If characters at both ends do not match, it's not a palindrome
+  if text[left] != text[right]:
+    is_palindrome = False
+    break
+  left += 1
+  right -= 1
+
+# Print result based on the boolean flag
+if is_palindrome:
+  print(f'"{text}" is a palindrome.')
+else:
+  print(f'"{text}" is not a palindrome.')
