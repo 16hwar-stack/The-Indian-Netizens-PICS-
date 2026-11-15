@@ -1,0 +1,18 @@
+# Program to find the common elements between two lists
+
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+
+# Convert both lists into sets
+set1 = set(list1)
+set2 = set(list2)
+
+# Find the intersection (common elements) between the two sets
+common_set = set1.intersection(set2)
+
+# Convert the result back to a list
+common_elements = list(common_set)
+
+print("List 1:", list1)
+print("List 2:", list2)
+print("Common elements:", common_elements)
