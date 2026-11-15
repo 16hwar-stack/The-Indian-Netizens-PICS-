@@ -1,0 +1,32 @@
+# Program to find the character with the highest frequency in a given string
+
+text = "programming"
+
+# Dictionary to store character frequencies
+char_count = {}
+
+for char in text:
+  # Skip spaces if there are any
+  if char == " ":
+    continue
+
+  if char in char_count:
+    char_count[char] += 1
+  else:
+    char_count[char] = 1
+
+# Variables to keep track of the most frequent character
+max_char = ""
+max_frequency = 0
+
+# Loop through the dictionary items to find the highest count
+for char, count in char_count.items():
+  if count > max_frequency:
+    max_frequency = count
+    max_char = char
+
+print("Given string:", text)
+print(
+    f"Character with the highest frequency: '{max_char}' (Appears"
+    f" {max_frequency} times)"
+)
